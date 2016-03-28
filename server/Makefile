@@ -5,12 +5,12 @@ SRC_DIR = ./ ../wrap
 INC_DIR = -I../wrap
 LIB_DIR = 
 LIBS = 
-DESTDIR = ./
+DESTDIR = ../bin
 DESTNAME = server
-OUTPUT = ./
+OUTPUT = ./out
 ###############################################################################
 
-DEST = $(DESTDIR)$(DESTNAME)
+DEST = $(DESTDIR)/$(DESTNAME)
 
 SRCS = $(shell find $(SRC_DIR) -maxdepth 1 -name "*.cpp")
 OBJS = $(patsubst %.cpp, $(OUTPUT)/%.o, $(SRCS))
